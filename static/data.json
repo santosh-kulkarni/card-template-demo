@@ -3,6 +3,7 @@
     "results":[
        {
           "category":"Web",
+          "presence": true,
           "subjects":[
                 {
                     "title" : "Python",
@@ -20,6 +21,7 @@
        },
        {
           "category":"Programming",
+          "presence": true,
           "subjects":[
             {
                 "title" : "Java",
@@ -37,6 +39,7 @@
        },
        {
           "category":"Algorithms",
+          "presence": true,
           "subjects":[
             {
                 "title" : "Backtracking",
@@ -54,6 +57,7 @@
        },
        {
           "category":"Machine Learning",
+          "presence": true,
           "subjects":[
             {
                 "title" : "NLP",
@@ -71,6 +75,7 @@
        },
        {
           "category":"BackEnd",
+          "presence": true,
           "subjects":[
             {
                 "title" : "Python Django",

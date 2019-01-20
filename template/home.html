@@ -30,18 +30,22 @@
         <div id="replace">
             {% for val in arr %}
             <h3>{{ val.category }}</h3>
-            <div class="row">
-                {% for sub in val.subjects %}
-                {% if sub %}
-                <div class="col-sm-6">
-                    <div class="box">
-                        <h4> TITLE : {{ sub.title }} </h4>
-                        <h4> PRICE : {{ sub.price }} </h4>
-                    </div>
+            {% if val.presence %}
+                <div class="row">
+                    {% for sub in val.subjects %}
+                    {% if sub %}
+                        <div class="col-sm-6">
+                            <div class="box">
+                                <h4> TITLE : {{ sub.title }} </h4>
+                                <h4> PRICE : {{ sub.price }} </h4>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
-                {% endif %}
-                {% endfor %}
-            </div>
+            {% else %}
+                <h3 style="margin-left: 30px;">No Subjects Found.</h3>
+            {% endif %}
             {% endfor %}
         </div>
     </div>

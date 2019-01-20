@@ -15,10 +15,17 @@ def sort_json_data(json_data, value):
     j = 0
     for val in json_data["results"]:
         j = 0
+        count = 0
+
         for sub in val["subjects"]:
             if value.lower() not in sub["title"].lower():
                 json_data["results"][i]["subjects"][j] = None
+                count = count + 1
             j = j + 1
+
+        if count == len(val["subjects"]):
+            json_data["results"][i]["presence"] = None
+
         i = i + 1
     return json_data
 
