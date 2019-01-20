@@ -1,0 +1,90 @@
+{
+    "response_code":0,
+    "results":[
+       {
+          "category":"Web",
+          "subjects":[
+                {
+                    "title" : "Python",
+                    "price" : 123
+                },
+                {
+                    "title" : "NodeJS",
+                    "price" : 67
+                },
+                {
+                    "title" : "Angular",
+                    "price" : 167
+                }
+          ]
+       },
+       {
+          "category":"Programming",
+          "subjects":[
+            {
+                "title" : "Java",
+                "price" : 44
+            },
+            {
+                "title" : "Python",
+                "price" : 78
+            },
+            {
+                "title" : "JavaScript",
+                "price" : 76
+            }
+          ]
+       },
+       {
+          "category":"Algorithms",
+          "subjects":[
+            {
+                "title" : "Backtracking",
+                "price" : 32
+            },
+            {
+                "title" : "Dynamic Programming",
+                "price" : 85
+            },
+            {
+                "title" : "Graph Algorithms",
+                "price" : 5
+            }
+          ]
+       },
+       {
+          "category":"Machine Learning",
+          "subjects":[
+            {
+                "title" : "NLP",
+                "price" : 12
+            },
+            {
+                "title" : "TenserFlow",
+                "price" : 50
+            },
+            {
+                "title" : "Deep Learning",
+                "price" : 43
+            }
+          ]
+       },
+       {
+          "category":"BackEnd",
+          "subjects":[
+            {
+                "title" : "Python Django",
+                "price" : 22
+            },
+            {
+                "title" : "PHP",
+                "price" : 21
+            },
+            {
+                "title" : "Node JavaScript",
+                "price" : 20
+            }
+          ]
+       }   
+    ]
+ }
