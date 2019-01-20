@@ -7,3 +7,11 @@
 h4 {
     padding-top: 30px;
 }
+.buttonload {
+    background-color: white; 
+    border: 0px;
+    color: blue; 
+    display: inline;
+    font-size: 35px; 
+  }
+  
