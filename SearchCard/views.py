@@ -1,11 +1,10 @@
 from django.shortcuts import render
 import json
-
+from django.http import HttpResponse
 # Create your views here.
 
-
 def get_json_data():
-    json_data = open("static/data.json")
+    json_data = open("static/data.json", "r+")
     json_data = json.load(json_data)
     return json_data
 
@@ -42,3 +41,35 @@ def first_page(request):
         json_data = get_json_data()    
         array = json_data["results"]
         return render(request, "home.html", {"arr": array})
+
+
+def put_data(request):
+    select = request.GET.getlist('select',default=None)
+    name = request.GET.getlist('name',default=None)
+    price = request.GET.getlist('price',default=None)
+    select = str(select[0])
+    name = str(name[0])
+    price = str(price[0])
+    json_data = get_json_data()
+
+    k = 0
+    flag = False
+    for val in json_data["results"]:
+        if val["category"] == select:
+            ob = {
+                "title" : name,
+                "price" : price
+            }
+            json_data["results"][k]["subjects"].append(ob)
+            flag = True
+        if flag:
+            break
+        k = k + 1
+
+    myfile = open("static/data.json", "w")
+
+    string = json.dumps(json_data)
+    myfile.write(string)
+    myfile.close() 
+    
+    return HttpResponse("Hello")

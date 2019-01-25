@@ -16,6 +16,42 @@
     <div class="container">
         <div class="form-group">
             <label> <h4>Search</h4> </label>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal" style="float: right; margin-top:31px; top: 50%;"> Add Your Subject</button>
+
+            <div class="modal" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">                        
+                            Choose your Category : 
+                            <select id = "dropDownId" class="form-control">
+                                <option>...</option>
+                                <option>Web</option>
+                                <option>Programming</option>
+                                <option>Algorithms</option>
+                                <option>Machine Learning</option>
+                                <option>BackEnd</option>
+
+                            </select>
+                            </br>
+                            Enter Your Subject Name : <input id="subname" type="text" class="form-control" />
+                            </br>
+                            Enter the Subject PRICE : <input id="subprice" type="number" class="form-control" />
+                            </br>
+                         
+                            </br>
+                            <button class="btn btn-primary" id="clicksubmit"  data-dismiss="modal" style="float: right; margin-right: 10px;">Submit</button>
+                            <button class="btn btn-danger" data-dismiss="modal" style="float: right; margin-right: 10px;">Cancel</button>
+                            </br>
+                            
+                            </br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-sm-6">
                     <input class="form-control" id="data" placeholder="Search For Subjects" style="width:100%;" />
@@ -27,6 +63,7 @@
                 </div>
             </div>
         </div>
+        <h3>Total Subjects Found : {{ total }}</h3>
         <div id="replace">
             {% for val in arr %}
             <h3>{{ val.category }}</h3>
@@ -49,6 +86,11 @@
             {% endfor %}
         </div>
     </div>
+
+    </br>
+    </br>
+    </br>
+
 </body>
 
 </html>
