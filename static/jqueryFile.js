@@ -17,6 +17,14 @@ $(document).ready(function() {
         });
     });
 
+    $("#clickcatsubmit").click(function() {
+        var name = $("#catname").val();
+        if(name == "") {
+            alert("Please Enter the category Name");
+        }
+        alert("This feature is not active currently");
+    });
+
     $("#clicksubmit").click(function() {
         var select =  $('#dropDownId').val();
         var name = $("#subname").val();
