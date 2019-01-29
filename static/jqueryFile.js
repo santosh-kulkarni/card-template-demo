@@ -40,7 +40,6 @@ $(document).ready(function() {
                     "price" : price
                 },
                 success: function(data) {
-                    console.log(data);
                     alert("Your Data is Added");
                     window.location.href = "/";
                 }
