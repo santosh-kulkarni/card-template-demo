@@ -11,7 +11,6 @@ import math
 from random import uniform
 import time
 from collections import OrderedDict
-import sseclient
 import threading
 import socket
 from oauth2client.service_account import ServiceAccountCredentials
