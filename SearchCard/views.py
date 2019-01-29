@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import json
 import urllib
-import pyrebase
+from . import pyrebase
 from django.http import HttpResponse
 config = {
     'apiKey': "AIzaSyDFCngrd6jrP1o6vvi63rdMZHX7kZyUvqI",
@@ -54,7 +54,6 @@ def get_subject_count(array):
             for sub in val["subjects"]:
                 if sub is not None:
                     count = count + 1
-        print (count)
         answer = answer + count
     return answer
 
