@@ -57,6 +57,14 @@ def get_subject_count(array):
         answer = answer + count
     return answer
 
+
+def load_category(array):
+    category = []
+    for val in array:
+        category.append(val["category"])
+    return category
+
+
 def first_page(request):
     if request.method == "POST":
         data = request.POST.dict()
@@ -70,7 +78,8 @@ def first_page(request):
         json_data = get_json_data()    
         array = json_data["results"]
         sub_count = get_subject_count(array)
-        return render(request, "home.html", {"arr": array, "total": sub_count})
+        category = load_category(array)
+        return render(request, "home.html", {"arr": array, "total": sub_count, "category": category})
 
 
 def get_children_count(select):

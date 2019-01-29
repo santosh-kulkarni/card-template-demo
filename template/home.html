@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <h2 class="text-center">Search Card Template Demo</h2>
+    <hr/>
     <div class="container">
         <div class="form-group">
             <label> <h4>Search</h4> </label>
@@ -28,11 +30,9 @@
                             Choose your Category : 
                             <select id = "dropDownId" class="form-control">
                                 <option>...</option>
-                                <option>Web</option>
-                                <option>Programming</option>
-                                <option>Algorithms</option>
-                                <option>Machine Learning</option>
-                                <option>BackEnd</option>
+                                {% for val in category %}
+                                <option>{{ val }}</option>
+                                {% endfor %}
 
                             </select>
                             </br>
@@ -53,10 +53,10 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                     <input class="form-control" id="data" placeholder="Search For Subjects" style="width:100%;" />
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                     <button class="buttonload" id="loadingButton">
                         <i class='fa fa-circle-o-notch fa-spin'></i>
                     </button>
@@ -71,7 +71,7 @@
                 <div class="row">
                     {% for sub in val.subjects %}
                     {% if sub %}
-                        <div class="col-sm-6">
+                        <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="box">
                                 <h4> TITLE : {{ sub.title }} </h4>
                                 <h4> PRICE : {{ sub.price }} </h4>
@@ -86,11 +86,10 @@
             {% endfor %}
         </div>
     </div>
-
+    <hr style="height: 1px; color: black;">
+    <h3 class="text-center">Created by Santosh Kulkarni</h3>
     </br>
-    </br>
-    </br>
-
+  
 </body>
 
 </html>
