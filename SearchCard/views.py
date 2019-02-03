@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import json
 import urllib
+import requests
 import pyrebase
 from django.http import HttpResponse
 config = {
@@ -29,7 +30,7 @@ def get_json_data():
 def sort_json_data(json_data, value):
     i = 0
     j = 0
-    for val in json_data["results"]:
+    for val in json_data["results"]:  
         j = 0
         count = 0
 
@@ -117,7 +118,5 @@ def put_data(request):
         "price": price
     }
     num = get_children_count(select)
-    print (num["current"])
-    print (num["count"])
     db.child("results").child(num["current"]).child("subjects").child(num["count"]).set(new_data)
     return HttpResponse("Hello")
