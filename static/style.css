@@ -15,3 +15,19 @@ h4 {
     font-size: 35px; 
   }
 
+  /* @media only screen and (max-width: 425px) {
+    body {
+      background-color: black;
+    }
+  }
+
+  @media only screen and (min-width: 426px) and (max-width: 1000px) {
+      body {
+        background-color: blue;
+      }
+  }
+  @media only screen and (min-width: 1001px) {
+    body {
+        background-color: red;
+    }
+} */
