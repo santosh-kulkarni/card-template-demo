@@ -5,12 +5,12 @@ import requests
 import pyrebase
 from django.http import HttpResponse
 config = {
-    'apiKey': "AIzaSyDFCngrd6jrP1o6vvi63rdMZHX7kZyUvqI",
-    "authDomain": "my-card-app.firebaseapp.com",
-    "databaseURL": "https://my-card-app.firebaseio.com",
-    "projectId": "my-card-app",
-    "storageBucket": "my-card-app.appspot.com",
-    "messagingSenderId": "590654162532"
+    'apiKey': "your_api_key",
+    "authDomain": "domain_name",
+    "databaseURL": "db_url",
+    "projectId": "project_id",
+    "storageBucket": "storage_bucket",
+    "messagingSenderId": "id_server"
 }
 
 firebase = pyrebase.initialize_app(config)
